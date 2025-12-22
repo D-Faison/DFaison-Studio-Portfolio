@@ -1,7 +1,20 @@
 body{
-    width: 100%;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    width: 95%;
     background: #197fb3;
     background: linear-gradient(9deg, rgba(25, 127, 179, 1) 0%, rgba(78, 212, 149, 1) 35%, rgba(152, 239, 245, 1) 75%, rgba(209, 201, 255, 1) 100%);
+}
+
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo{
+    font-size: 3em;
 }
 
 /*Hero Section*/
@@ -10,6 +23,8 @@ body{
     display: flex; /**/
     justify-content: space-between;
     align-items: center;
+    padding-left: 30px;
+    
 }
 
 .heroLeftText{
@@ -39,4 +54,16 @@ body{
 .toolImg{
     width: 75px;
     height: auto;
+}
+
+/*Slide Show*/
+.slideShowImage{
+    padding: 15px;
+    width: 50%;
+    height: auto;
+    transition: ease-in-out 0.5s ease-in-out;
+}
+
+.slideShowImage:hover{
+   width: 75%;
 }
