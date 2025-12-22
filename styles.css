@@ -1,6 +1,42 @@
 body{
     width: 100%;
-    height: 100vh;
     background: #197fb3;
     background: linear-gradient(9deg, rgba(25, 127, 179, 1) 0%, rgba(78, 212, 149, 1) 35%, rgba(152, 239, 245, 1) 75%, rgba(209, 201, 255, 1) 100%);
+}
+
+/*Hero Section*/
+.heroSection{
+    width: 100%;
+    display: flex; /**/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroLeftText{
+    max-width: 40% ;
+}
+
+.menu {
+  width: 260px;
+  height: 420px;
+
+  padding: 80px 60px; /* inset content */
+  margin-right: 15%;
+
+  background-image: url("Images/Frame.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/*About Section*/
+
+.toolImg{
+    width: 75px;
+    height: auto;
 }
