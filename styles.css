@@ -33,19 +33,37 @@ body{
 
 .menu {
   width: 260px;
-  height: 420px;
+  height: 400px;
 
-  padding: 80px 60px; /* inset content */
+  background-color: black;
   margin-right: 15%;
-
-  background-image: url("Images/Frame.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: flex-start; /* IMPORTANT */
+
+  padding: 30px 20px; /* MUCH smaller */
+  gap: 14px;
+}
+
+
+.menuTitle{
+  width: 100%;
+  height: 350px; /* make the frame taller */
+  
+  background-image: url("Images/PinkFrame.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* IMPORTANT */
+  background-position: center;
+
+  padding: 20px 0; /* space between frame and text */
+  text-align: center;
+  font-size: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -57,13 +75,29 @@ body{
 }
 
 /*Slide Show*/
+
+.individualSlide{
+    display: none;
+}
+
 .slideShowImage{
     padding: 15px;
-    width: 50%;
+    width: 80%;
     height: auto;
     transition: ease-in-out 0.5s ease-in-out;
 }
 
-.slideShowImage:hover{
-   width: 75%;
+.slideShowContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prevBtn,.nextBtn{
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
 }

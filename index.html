@@ -10,7 +10,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
         </style>
         <link rel="stylesheet" href="styles.css">
-        <script src="logic.js"></script>
+        
     </head>
     <body>
         <!--Hamburger Menu-->
@@ -110,7 +110,7 @@
                     <!--Slide Show of Project-->
                     <div class="slideShowContainer">
                         <!--Previous Button-->
-                        <button class="prevBtn"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+                        <button class="prevBtn" onclick="plusSlides(-1)"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
                         <!--Slide 1-->
                         <div class="individualSlide">
                             <img src="Images/movieFinderIndex.png" alt="" class="slideShowImage">
@@ -132,7 +132,7 @@
                             <caption class="slideShowImageCaption"></caption>
                         </div>
                         <!--Next Button-->
-                        <button class="nextBtn"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                        <button class="nextBtn" onclick="plusSlides(1)"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
                     </div><!--End of slide show container-->
 
                 </div><!--End of Project Item-->
@@ -146,4 +146,5 @@
 
     <!--Software Tech Icons:-->
     <!--https://techicons.dev/-->
+    <script src="logic.js"></script>
 </html>
