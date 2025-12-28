@@ -17,15 +17,7 @@ body{
     font-size: 3em;
 }
 
-.hamburgerMenu{
-    position: fixed;
-    top: 20px;
-    right: 30px;
-    font-size: 2em;
-    color: black;
-    z-index: 1000;
-    cursor: pointer;
-}
+
 /*Hero Section*/
 .heroSection{
     width: 100%;
@@ -41,6 +33,16 @@ body{
     max-width: 40% ;
 }
 
+.hamburgerMenu{
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: black;
+    z-index: 1000;
+    cursor: pointer;
+}
+
 .menu {
   width: 260px;
   height: 300px;
@@ -54,10 +56,39 @@ body{
   padding: 30px 20px; /* MUCH smaller */
   gap: 14px;
 
-  border: solid rgb(99, 50, 10) 10px;
+
+}
+
+.frame1{
+  border: solid rgb(99, 50, 10) 20px;
   border-radius: 10px;
   background-color: rgb(199, 152, 82);
 }
+
+/* Menu hidden when scrolling */
+.menu.collapsed {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+
+/* Menu becomes floating overlay */
+.menu.overlay {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  margin-right: 0; /* override your 15% */
+  z-index: 999;
+}
+
+/* Opened from hamburger */
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  box-shadow: -15px 15px 5px rgba(12, 13, 92, 0.2);
+}
+
 
 
 .menuTitle{
@@ -84,8 +115,6 @@ h4{
 
 .toolBox{
   margin: 5px;
-  border: solid black 2px;
-  border-radius: 10px;
   padding: 20px;
 }
 

@@ -16,3 +16,36 @@ function showSlides(n){
     }
     slides[slideImageIndex-1].style.display = "block";
 }
+
+
+//Hamburger Menu Functionality
+const heroSection = document.querySelector(".heroSection");
+const menu = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburgerMenu");
+
+let menuOpen = false;
+
+// Hamburger click toggle
+hamburger.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  menu.classList.toggle("open", menuOpen);
+});
+
+// Observe hero section
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      // HERO VISIBLE
+      hamburger.style.display = "none";
+      menu.classList.remove("collapsed", "overlay", "open");
+      menuOpen = false;
+    } else {
+      // SCROLLED PAST HERO
+      hamburger.style.display = "block";
+      menu.classList.add("collapsed", "overlay");
+    }
+  },
+  { threshold: 0.25 }
+);
+
+observer.observe(heroSection);
