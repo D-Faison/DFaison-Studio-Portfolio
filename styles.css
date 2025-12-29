@@ -166,6 +166,9 @@ h3{
   overflow: hidden;
 }
 
+.projectItem{
+  padding: 10px;
+}
 
 .prevBtn,
 .nextBtn {
