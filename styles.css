@@ -1,8 +1,12 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    width: 95%;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  width: 95%;
   background: #020024;
   background: linear-gradient(52deg, rgba(2, 0, 36, 1) 0%, rgb(5, 5, 71) 35%, rgb(55, 0, 255) 100%);
 }
@@ -45,7 +49,7 @@ body{
 
 .menu {
   width: 260px;
-  height: 300px;
+  height: fit-content;
   margin-right: 15%;
 
   display: flex;
@@ -56,7 +60,15 @@ body{
   padding: 30px 20px; /* MUCH smaller */
   gap: 14px;
 
+  background-color: rgb(255, 255, 255);
+}
 
+a{
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: tomato;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .frame1{
@@ -126,7 +138,9 @@ h4{
 }
 
 h3{
-  font-size: 1.5em;
+  font-size: 1.8em;
+  color: white;
+  padding-left: 20px;
 }
 
 /*Tool Box*/
@@ -147,8 +161,8 @@ h3{
 }
 
 .slideShowImage {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
   margin-left: 20%;
 }
