@@ -49,3 +49,51 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(heroSection);
+
+// Starfield Background
+const canvas = document.getElementById("starfield");
+const ctx = canvas.getContext("2d");
+
+let stars = [];
+const STAR_COUNT = 120;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+function createStars() { // Initialize star positions and properties
+  stars = [];
+  for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5, // Star size
+      alpha: Math.random(),   // Initial brightness 
+      twinkle: Math.random() * 0.02 + 0.005 // Twinkle speed
+    });
+  }
+}
+
+function drawStars() { // Draw and animate stars
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let star of stars) {
+    star.alpha += star.twinkle; // Update brightness
+    if (star.alpha <= 0 || star.alpha >= 1) { // Reverse twinkle direction
+      star.twinkle *= -1;
+    }
+
+    ctx.beginPath(); // Draw star
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);// Full circle
+    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+    ctx.fill();
+  }
+
+  requestAnimationFrame(drawStars);// Loop the animation
+}
+
+createStars();
+drawStars();

@@ -3,8 +3,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     width: 95%;
-    background: #197fb3;
-    background: linear-gradient(9deg, rgba(25, 127, 179, 1) 0%, rgba(78, 212, 149, 1) 35%, rgba(152, 239, 245, 1) 75%, rgba(209, 201, 255, 1) 100%);
+  background: #020024;
+  background: linear-gradient(52deg, rgba(2, 0, 36, 1) 0%, rgb(5, 5, 71) 35%, rgb(55, 0, 255) 100%);
 }
 
 .knewave-regular {
@@ -60,9 +60,9 @@ body{
 }
 
 .frame1{
-  border: solid rgb(99, 50, 10) 20px;
+  border: solid rgb(255, 255, 255) 2px;
   border-radius: 10px;
-  background-color: rgb(199, 152, 82);
+  background-color: rgba(255, 255, 255, 0.699);
 }
 
 /* Menu hidden when scrolling */
@@ -189,4 +189,15 @@ h3{
 
 .nextBtn {
   right: 20px;
+}
+
+
+/*Stars Section*/
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* behind everything */
 }
