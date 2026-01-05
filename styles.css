@@ -81,6 +81,7 @@ a{
 .menu.collapsed {
   opacity: 0;
   pointer-events: none;
+  transition: all 0.3s ease;
   transform: translateY(-20px);
 }
 
@@ -116,11 +117,19 @@ a{
 }
 
 h2{
-    font-size: 2em;
+  padding-left: 20px;
+  color: white;
+  font-size: 2em;
 }
 
 h4{
+  color: white;
+    font-size: 1.5em;
+}
+
+h5{
     font-size: 1.2em;
+    padding-left: 10px;
 }
 
 .toolBox{
@@ -133,6 +142,7 @@ h4{
 .toolImg{
     width: 75px;
     height: auto;
+    padding: 5px;
 }
 
 h3{
